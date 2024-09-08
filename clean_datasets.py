@@ -7,14 +7,14 @@ tqdm.pandas()
 from multiprocessing import Pool
 
 if __name__ == "__main__":
-    data_names = ['TRAIN_RES_2.csv', 'TRAIN_RES_3.csv', 'TRAIN_RES_4.csv',
-                  'TRAIN_RES_5.csv']  # , 'TRAIN_RES_1.csv','TRAIN_SAL.csv']
+    data_names = ['TEST_RES.csv','TEST_SAL.csv']#'TRAIN_RES_2.csv', 'TRAIN_RES_3.csv', 'TRAIN_RES_4.csv',
+                  #'TRAIN_RES_5.csv']  # , 'TRAIN_RES_1.csv','TRAIN_SAL.csv']
     for data_name in data_names:
         df = pd.read_csv(f'vprod_train/{data_name}', encoding='utf-8')
 
         names_for_clean = ['achievements_modified', 'demands']
         save_package_name = 'clean_res'
-        if data_name == 'TRAIN_SAL.csv':
+        if data_name == 'TEST_SAL.csv':
             save_package_name = 'clean_sal'
             names_for_clean = ['additional_requirements', 'education_speciality', 'other_vacancy_benefit',
                                'position_requirements',
