@@ -4,7 +4,6 @@ from html.parser import HTMLParser
 import re
 from pymorphy3 import MorphAnalyzer
 import nltk
-
 # nltk.download('stopwords')
 from nltk.corpus import stopwords
 
